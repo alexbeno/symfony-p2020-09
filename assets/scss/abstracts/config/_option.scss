@@ -1,0 +1,78 @@
+/*
+* TYPE OF MEDIA QUERY
+* =======================
+* min for min-width query
+* max for max-width query
+*/
+
+$queryType: min;
+
+
+/*
+* Set of configuration
+* =======================
+* color set primary, secondary, terciary
+* font set title, courant
+*/
+
+/*
+* Color set
+*/
+
+$primary-color: $black;
+$secondary-color: $white;
+$terciary-color: $black2;
+
+/*
+* Font set
+*/
+
+$font-title: 'greycliff', serif;
+$font-courant: 'Open Sans', sans-serif;
+
+/*
+* base configuration
+* =======================
+* font size set h1, h2, h3, h4, courant
+* font weight set h1, h2, h3, h4, courant
+* font color set h1, h2, h3, h4, courant
+*/
+
+/*
+* base font size
+*/
+
+$size-h1: 100;
+$size-h2: 144;
+$size-h3: 48;
+$size-h4: 14;
+$size-courant: 14;
+$size-nav: 20;
+$size-social: 14;
+
+/*
+* base font weight
+*/
+
+$weight-h1: $heavy;
+$weight-h2: $bold;
+$weight-h3: $extra;
+$weight-h4: $regular;
+$weight-courant: $regular;
+
+/*
+* base color
+*/
+
+$color-h1: $primary-color;
+$color-h2: $primary-color;
+$color-h3: $primary-color;
+$color-h4: $primary-color;
+$color-courant: $primary-color;
+
+
+/*
+* grid
+*/
+
+$leftRight: 60px;
