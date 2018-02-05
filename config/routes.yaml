@@ -5,7 +5,12 @@
 index:
   path: /
   defaults: { _controller: 'App\Controller\HomeController::index' }
+
 discover:
   path: /discover
   defaults: { _controller: 'App\Controller\DiscoverController::index' }
+
+event:
+  path: /event/{slug}
+  defaults: { _controller: 'App\Controller\EventController::index' }
 
