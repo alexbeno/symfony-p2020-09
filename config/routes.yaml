@@ -2,7 +2,10 @@
 #    path: /
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
 
-about:
-   path: /about
-   defaults: { _controller: 'App\Controller\AboutTestController::index' }
+index:
+  path: /
+  defaults: { _controller: 'App\Controller\HomeController::index' }
+discover:
+  path: /discover
+  defaults: { _controller: 'App\Controller\DiscoverController::index' }
 
