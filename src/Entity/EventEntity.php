@@ -3,9 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EventEntityRepository")
+ * @Vich\Uploadable
  */
 class EventEntity
 {
@@ -88,13 +90,27 @@ class EventEntity
 
     /**
      * @ORM\Column(type="string")
+     * @var string
      */
     private $imageOne;
 
     /**
      * @ORM\Column(type="string")
+     * @var File
+     */
+    private $imageOneFile;
+
+    /**
+     * @ORM\Column(type="string")
+     * @var string
      */
     private $imageTwo;
+
+    /**
+     * @ORM\Column(type="string")
+     * @var File
+     */
+    private $imageTwoFile;
 
 
     /**
@@ -359,6 +375,38 @@ class EventEntity
     public function setImageTwo($imageTwo)
     {
         $this->imageTwo = $imageTwo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImageOneFile()
+    {
+        return $this->imageOneFile;
+    }
+
+    /**
+     * @param mixed $imageOneFile
+     */
+    public function setImageOneFile($imageOneFile)
+    {
+        $this->imageOneFile = $imageOneFile;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImageTwoFile()
+    {
+        return $this->imageTwoFile;
+    }
+
+    /**
+     * @param mixed $imageTwoFile
+     */
+    public function setImageTwoFile($imageTwoFile)
+    {
+        $this->imageTwoFile = $imageTwoFile;
     }
 
 
