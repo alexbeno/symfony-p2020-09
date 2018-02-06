@@ -95,7 +95,7 @@ class EventEntity
      * @ORM\Column(type="string")
      */
     private $imageTwo;
-    
+
 
     /**
      * @return mixed
