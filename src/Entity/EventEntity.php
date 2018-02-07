@@ -135,7 +135,11 @@ class EventEntity
      */
     public function setUidEvent($uidEvent)
     {
-        $this->uidEvent = $uidEvent;
+
+        $trimed = str_replace(' ', '', $uidEvent);
+
+        $uid = uniqid($trimed, true);
+        $this->uidEvent = md5($uid);
     }
 
     /**

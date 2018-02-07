@@ -41,6 +41,7 @@ easy_admin:
                - { property: 'imageTwo', type: 'image', base_path: '/images/event' }
        form:
            fields:
+               - { property: 'uidEvent', help: 'Name of event' }
                - title
                - type
                - description
@@ -54,6 +55,5 @@ easy_admin:
                - childPrice
                - organizer
                - phone
-               - uidEvent
                - { property: 'imageOneFile', type: 'vich_image' }
                - { property: 'imageTwoFile', type: 'vich_image' }
