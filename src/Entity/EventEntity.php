@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EventEntityRepository")
@@ -95,7 +96,7 @@ class EventEntity
     private $imageOne;
 
     /**
-     * @ORM\Column(type="string")
+     * @Vich\UploadableField(mapping="eventOne", fileNameProperty="imageOne")
      * @var File
      */
     private $imageOneFile;
@@ -107,7 +108,7 @@ class EventEntity
     private $imageTwo;
 
     /**
-     * @ORM\Column(type="string")
+     * @Vich\UploadableField(mapping="eventTwo", fileNameProperty="imageTwo")
      * @var File
      */
     private $imageTwoFile;
@@ -388,9 +389,13 @@ class EventEntity
     /**
      * @param mixed $imageOneFile
      */
-    public function setImageOneFile($imageOneFile)
+    public function setImageOneFile(File $imageOne = null)
     {
-        $this->imageOneFile = $imageOneFile;
+        $this->imageOneFile = $imageOne;
+
+        if ($imageOne) {
+            //$this->updatedAt = new \DateTime('now');
+        }
     }
 
     /**
@@ -404,9 +409,13 @@ class EventEntity
     /**
      * @param mixed $imageTwoFile
      */
-    public function setImageTwoFile($imageTwoFile)
+    public function setImageTwoFile(File $imageTwo = null)
     {
-        $this->imageTwoFile = $imageTwoFile;
+        $this->imageTwoFile = $imageTwo;
+
+        if ($imageTwo) {
+            //$this->updatedAt = new \DateTime('now');
+        }
     }
 
 

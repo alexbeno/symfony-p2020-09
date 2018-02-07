@@ -7,4 +7,53 @@
 
 easy_admin:
    entities:
-        - App\Entity\EventEntity
+
+     EventEntity:
+       class: App\Entity\EventEntity
+       list:
+           fields:
+               - title
+               - type
+               - description
+               - startDate
+               - endDate
+               - city
+               - address
+               - { property: 'imageOne', type: 'image', base_path: '/images/event' }
+               - { property: 'imageTwo', type: 'image', base_path: '/images/event' }
+       show:
+           fields:
+               - title
+               - type
+               - description
+               - startDate
+               - endDate
+               - place
+               - city
+               - address
+               - adultPrice
+               - teenagerPrice
+               - childPrice
+               - organizer
+               - phone
+               - uidEvent
+               - { property: 'imageOne', type: 'image', base_path: '/images/event' }
+               - { property: 'imageTwo', type: 'image', base_path: '/images/event' }
+       form:
+           fields:
+               - title
+               - type
+               - description
+               - startDate
+               - endDate
+               - place
+               - city
+               - address
+               - adultPrice
+               - teenagerPrice
+               - childPrice
+               - organizer
+               - phone
+               - uidEvent
+               - { property: 'imageOneFile', type: 'vich_image' }
+               - { property: 'imageTwoFile', type: 'vich_image' }
